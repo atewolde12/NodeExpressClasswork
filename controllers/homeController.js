@@ -1,32 +1,30 @@
-var courses = [
+var courses=[
     {
-        title: "Raspberry Cake",
+        title:"Raspberry Cake",
         cost: 50
     },
     {
-        title: "Artichoke",
+        title:"Artichoke",
         cost: 20
     },
     {
-        title: "Burger",
+        title:"Burger",
         cost: 100
     },
 ]
 
-
-
-exports.showCourses = (reg,res) => {
-    res.render("courses", {offeredZCourses: courses});
+exports.showCourses = (req, res) => {
+    res.render("courses", {offeredCourses:courses});
 }
 
-exports.showSignup = (reg, res) => {
+exports.showSignUp = (req, res) => {
     res.render("contact")
 }
 
-exports.postedSignUpForm = (reg, res) => {
+exports.postedSignUpForm = (req, res) => {
     res.render("thanks")
 }
 
-exports.showIndex = (reg,res) => {
+exports.showIndex = (req, res) => {
     res.render("index");
 }
